@@ -10,12 +10,10 @@ geografia e historia
     guerra y ganador
     bando de guerra y componentes del bando
 
-----------Hecho----------
 matematicas
     random 2-9 *random 2-1000
     random 0-10000 +random 0-1000 -random 0-10000
     random 0-1000/random 2-9
-----------Hecho----------
 
 lengua
     palabra y silabas
@@ -25,8 +23,8 @@ lengua
     frase y sujeto
 
 fisica y quimica
-    problema de movimiento(si un globo con helio esta en un coche y acelera para donde va)
-    explicar fenomeno(porque en la luna una pluma y un yunque caen a la vez)
+    problema de movimiento
+    explicar fenomeno
     elemento y numero
     numero y elemento
-    reaccion y explicacion(porque cuando metes mentos en la cocacola hace eso)
+    reaccion y explicacion
