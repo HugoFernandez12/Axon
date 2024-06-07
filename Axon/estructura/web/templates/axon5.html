@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='axon5.css') }}">
+        <title>{% block title %}AXON{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div class="general">
+            <div class="titulo">
+                <h1 class="tituloAxon"><a class="textoTituloAxon" href="/principal">AXON</a></h1>
+            </div>
+            <div class="principal">
+                <form class="formulario" method="POST">
+                <p class="tema"><b>{{nombreGrupo}}</b></p>
+                <p class="pregunta"><b>{{preguntaWeb}}</b></p>
+                <p class="res"><input class="buttonJugar" name="respuesta1" type="submit" value="{{respuesta1}}"></p>
+                <p class="res"><input class="buttonJugar" name="respuesta2" type="submit" value="{{respuesta2}}"></p>
+                <p class="res"><input class="buttonJugar" name="respuesta3" type="submit" value="{{respuesta3}}"></p>
+                <p class="res"><input class="buttonJugar" name="respuesta4" type="submit" value="{{respuesta4}}"></p>
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>
+
+
+
+

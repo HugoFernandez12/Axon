@@ -1,0 +1,108 @@
+body
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(imagenes/backgroundTexture.jpg);
+}
+a
+{
+    color: black;
+    text-decoration: none;
+}
+p
+{
+    color:white;
+}
+.titulo
+{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.tituloAxon
+{
+    padding-left: 1em;
+    padding-right: 1em;
+    align-self: center;
+    color: white;
+    margin: 0px;
+}
+.textoTituloAxon
+{
+    color: white;
+    font-size: 4rem;
+    
+}
+.general
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.añadirAmigo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tablaAmigos
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tablas
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.tablaMedias
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttonJugar {
+    background-color:#000000;
+    border-radius:10px;
+    border:2px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:0.8rem;
+    font-weight:bold;
+    padding:5px 10px;
+    text-decoration:none;
+    margin-left:2rem;
+}
+.buttonJugar:hover {
+    background-color: white;
+    color: black;
+}
+.buttonJugar:active {
+    position:relative;
+    top:1px;
+}
+.error
+{
+    display:flex;
+    justify-content: center;
+}
+.perfil
+{
+    justify-content: end;
+    direction: rtl;
+}
+.imagenPerfil
+{
+    width: 6rem;
+    border-radius:10px;
+}
+input[type=text] {
+    border-radius: 10px;
+    border: 2px solid white;
+    background: rgba(0,0,0,0.0);
+    color: white;
+    padding-left: 0.4rem;
+    font-size: 0.95rem;
+}

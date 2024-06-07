@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='axon12.css') }}">
+        <title>{% block title %}AXON{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div class="general">
+            <form method="POST">
+                <div class="perfil">
+                    <div class="cerrarSesionAdmin">
+                        <p class="adminTexto">ADMIN</p>
+                        <input class="buttonCerrarAdmin" name="cerrarSesion" type="submit" value="Cerrar Sesion">
+                    </div>
+                </div>
+            </form>
+            <div class="titulo">
+                <h1 class="tituloAxon">AXON</h1>
+            </div>
+            <div class="navAdmin">
+                <a href="/grupoAdmin">Grupos</a>
+                <p>|</p>
+                <a href="/usuarioAdmin">Usuarios</a>
+                <p>|</p>
+                <a href="/crearPreguntasAdmin">Crear Preguntas</a>
+                <p>|</p>
+                <a href="/preguntasAdmin">Modificar Preguntas</a>
+                <p>|</p>
+                <a href="/tematicaAdmin">Tematicas</a>
+            </div>
+            <div class="principal">
+                <form class="formulario" method="POST">
+                    {% for x in range(0,lenghtListadoUsuarios)%}
+                        <div class="listaUsuario">
+                            <p>{{listaUsuarios[x][0]}}</p>
+                            <input class="buttonJugar" name="{{x}}" type="submit" value="Ver Perfil">
+                        </div>
+                    {% endfor %}
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>
+
+
+

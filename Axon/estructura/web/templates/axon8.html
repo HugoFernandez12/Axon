@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='axon8.css') }}">
+        <title>{% block title %}AXON{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% set coma = "," %}
+        {% block body %}
+        <form method="POST">
+            <div class="general">
+                <div class="perfil">
+                    <a href="/perfil"><img class="imagenPerfil" src="static/imagenes/perfil.png" /></a>
+                </div>
+                <div class="titulo">
+                    <h1 class="tituloAxon"><a class="textoTituloAxon" href="/principal">AXON</a></h1>
+                </div>
+                <div class="principal">
+                    <div class="añadirGrupo">
+                        {% if nombreGrupo==None or nombreGrupo=="" %}
+                            <input class="valor" type="text" name="nombreGrupo" size="20">
+                        {% else %}
+                            <input class="valor" type="text" value="{{nombreGrupo}}" name="nombreGrupo" size="20">
+                        {% endif %}
+                        <input class="buttonJugar" name="crearGrupo" type="submit" value="Crear">
+                    </div>
+                    <div class="tablaMedias">
+                        <select name="tema">
+                            {% for x in arrayTemas %}
+                                <option value={{x[0]}}>{{x[0]}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="añadirGrupo">
+                        {% if lenghtAmigosGrupo==0 %}
+                            <p>Aun no has agregado ningun amigo al grupo</p>
+                        {% else %}
+                            {% for x in range(0,lenghtAmigosGrupo) -%}
+                                {% if x==0 %}
+                                    <p>{{arrayAmigoGrupo[x][0]}}</p>
+                                {% else %}
+                                    <p>{{coma+arrayAmigoGrupo[x][0]}}</p>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="añadirGrupo">
+                        <p>{{error}}{{mensajeControl}}</p>
+                    </div>
+                    <div class="tablas">
+                        <div class="tabla">
+                            {% for x in range(0,lenghtAmigos) -%}
+                                <p>{{arrayAmigos[x][0]}}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="tabla">
+                            {% for x in range(0,lenghtAmigos) -%}
+                                <input class="buttonJugar" name={{x}} type="submit" value="Agregar">
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="tabla">
+                        <input class="buttonJugar" name="borrarAmigosGrupo" type="submit" value="Borrar">
+                    </div>
+                </div>
+            </div>
+        </form>
+        {% endblock %}
+    </body>
+</html>
+
+
+

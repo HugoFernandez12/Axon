@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='axon10.css') }}">
+        <title>{% block title %}AXON{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <form method="POST">
+            <div class="general">
+                <div class="perfil">
+                    <a href="/perfil"><img class="imagenPerfil" src="static/imagenes/perfil.png" /></a>
+                </div>
+                <div class="titulo">
+                    <h1 class="tituloAxon"><a class="textoTituloAxon" href="/principal">AXON</a></h1>
+                </div>
+                <div class="principal">
+                    <div class="tabla">
+                        <p class="nombreGrupo">{{nombreGrupo}}</p>
+                    </div>
+                    {% for x in range(0,lenghtUsarioGrupoPuntuacion) %}
+                    <div class="tabla">
+                        <div class="contenedor">
+                            <p>{{arrayUsuario[x]}}</p>
+                        </div>
+                        <div class="contenedor">
+                            <p>{{arrayPuntuacion[x]}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </form>
+        {% endblock %}
+    </body>
+</html>
+
+
+
+
