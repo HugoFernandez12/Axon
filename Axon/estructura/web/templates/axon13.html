@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='axon13.css') }}">
+        <title>{% block title %}AXON{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div class="general">
+            <form method="POST">
+                <div class="perfil">
+                    <div class="cerrarSesionAdmin">
+                        <p class="adminTexto">ADMIN</p>
+                        <input class="buttonCerrarAdmin" name="cerrarSesion" type="submit" value="Cerrar Sesion">
+                    </div>
+                </div>
+            </form>
+            <div class="titulo">
+                <h1 class="tituloAxon">AXON</h1>
+            </div>
+            <div class="navAdmin">
+                <a href="/grupoAdmin">Grupos</a>
+                <p>|</p>
+                <a href="/usuarioAdmin">Usuarios</a>
+                <p>|</p>
+                <a href="/crearPreguntasAdmin">Crear Preguntas</a>
+                <p>|</p>
+                <a href="/preguntasAdmin">Modificar Preguntas</a>
+                <p>|</p>
+                <a href="/tematicaAdmin">Tematicas</a>
+            </div>
+            <div class="principal">
+                <form class="formulario" method="POST">
+                    {% if error!="" %}
+                        <div class="error">
+                            <p>{{error}}</p>
+                        </div>
+                    {% elif mensajeControl!="" %}
+                        <div class="error">
+                            <p>{{mensajeControl}}</p>
+                        </div>
+                    {% endif %}
+                    <div class="filtro">
+                        <div class="filtroContenedor">
+                            <select name="tema">
+                                {% for x in arrayTemas %}
+                                    {% if x[0]==temaFiltro %}
+                                        <option value="{{x[0]}}" selected>{{x[0]}}</option>
+                                    {% else %}
+                                        <option value="{{x[0]}}">{{x[0]}}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="filtroContenedor">
+                            <input class="buttonFiltrar" name="filtrar" type="submit" value="Filtrar">
+                        </div>
+                        <div class="filtroContenedor">
+                            <input class="buttonFiltrar" name="noFiltrar" type="submit" value="No Filtrar">
+                        </div>
+                    </div>
+                    {% for x in range(0,lenghtPregunta) %}
+                        <div class="preguntaContenedor">
+                            <p>{{arrayPregunta[x]}}</p>
+                        </div>
+                        <div class="preguntaContenedor">
+                            <input class="buttonModificar" name={{x}} type="submit" value="Modificar Pregunta">
+                        </div>
+                    {% endfor %}
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>
+
+
+

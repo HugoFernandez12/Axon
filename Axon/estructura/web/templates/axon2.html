@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='axon2.css') }}">
+        <title>{% block title %}AXON{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <form method="POST">
+            <div class="general">
+                <div class="titulo">
+                    <h1 class="tituloAxon"><a class="textoTituloAxon" href="/principal">AXON</a></h1>
+                </div>
+                <div class="principal">
+                    <div class="usuarioMedia">
+                        <p class="usuario">{{usuarioConectado}}</p>
+                        <p class="media">Media general: {{mediaUsuarioGeneral}}</p>
+                        <div class="referencias">
+                            <input class="buttonJugar" name="amigo" type="submit" value="Amigos">
+                            <input class="buttonJugar" name="grupo" type="submit" value="Grupos">
+                            <input class="buttonJugar" name="clave" type="submit" value="Cambiar Clave">
+                            <input class="buttonJugar" name="cerrarSesion" type="submit" value="Cerrar Sesion">
+                        </div>
+                    </div>
+                    <div class="tablas">
+                        <div class="tablaMedias">
+                            <p>Tus estadisticas:</p>
+                        </div>
+                    </div>
+                    <div class="tablas">
+                        <div class="tablaMedias">
+                            <input class="buttonArray" name="media" type="submit" value="Dia">
+                            <input class="buttonArray" name="media" type="submit" value="Mes">
+                            <input class="buttonArray" name="media" type="submit" value="Anyo">
+                            <input class="buttonArray" name="media" type="submit" value="General">
+                        </div>
+                    </div>
+                    <div class="bordeFiltrado">
+                    {% if media=="Dia" %}
+                        {% for x in range(0,lenghtArrayTemas) %}
+                            <div class="filtrado">
+                                <p>{{arrayTemas[x][0]}}</p>
+                                <p>{{arrayMediaDia[x]}}</p>
+                            </div>
+                        {% endfor %}
+                        
+                    {% elif media=="Mes" %}
+                        {% for x in range(0,lenghtArrayTemas) %}
+                            <div class="filtrado">
+                                <p>{{arrayTemas[x][0]}}</p>
+                                <p>{{arrayMediaMes[x]}}</p>
+                            </div>
+                        {% endfor %}
+                        
+                    {% elif media=="Anyo" %}
+                        {% for x in range(0,lenghtArrayTemas) %}
+                            <div class="filtrado">
+                                <p>{{arrayTemas[x][0]}}</p>
+                                <p>{{arrayMediaAnyo[x]}}</p>
+                            </div>
+                        {% endfor %}
+                        
+                    {% elif media=="General" %}
+                        {% for x in range(0,lenghtArrayTemas) %}
+                            <div class="filtrado">
+                                <p>{{arrayTemas[x][0]}}</p>
+                                <p>{{arrayMediaGeneral[x]}}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </form>
+        {% endblock %}
+    </body>
+</html>
+

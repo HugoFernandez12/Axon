@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='axon4.css') }}">
+        <title>{% block title %}AXON{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div class="general">
+            <div class="titulo">
+                <h1 class="tituloAxon"><a class="textoTituloAxon" href="/principal">AXON</a></h1>
+            </div>
+            <div class="principal">
+                {% if cont>=5 %}
+                    <p class="res">No quedan mas preguntas para hoy!</p>
+                    {% for x in range(0,lenghtArrayCorrectasUsuario)%}
+                        {% if arrayCorrectasUsuario[x]==0 %}
+                            <p class="res">Respuesta{{x+1}}: incorrecta<p/>
+                        {% else %}
+                            <p class="res">Respuesta{{x+1}}: correcta<p/>
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <form class="formulario" method="POST">
+                    <p class="tema"><b>{{tema}} {{cont+1}}/5</b></p>
+                    <p class="pregunta"><b>{{preguntaWeb}}</b></p>
+                    <p class="res"><input class="buttonJugar" name="respuesta1" type="submit" value="{{respuesta1}}"></p>
+                    <p class="res"><input class="buttonJugar" name="respuesta2" type="submit" value="{{respuesta2}}"></p>
+                    <p class="res"><input class="buttonJugar" name="respuesta3" type="submit" value="{{respuesta3}}"></p>
+                    <p class="res"><input class="buttonJugar" name="respuesta4" type="submit" value="{{respuesta4}}"></p>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>
+
+
+

@@ -1,0 +1,220 @@
+body
+{
+    background-image: linear-gradient(rgba(150, 0, 0, 0.7), rgba(150, 0, 0, 0.7)), url(imagenes/backgroundTexture.jpg);
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+p
+{
+   color: white; 
+}
+.general
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo
+{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.tituloAxon
+{
+    padding-left: 1em;
+    padding-right: 1em;
+    align-self: center;
+    color: white;
+    margin: 0px;
+    font-size: 4rem;
+}
+.textoTituloAxon
+{
+    color: white;
+    font-size: 4rem;
+    
+}
+
+
+.principal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyIndex
+{
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    margin-right: 10em;
+    margin-left: 10em;
+    background-color:#9bcbcc;
+}
+
+.tituloIndex
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size:2em;
+}
+
+.subtituloIndex
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size:1em;
+}
+.usuarioMedia
+{
+    display: flex;
+    flex-direction: column;
+}
+.filtros
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.media
+{
+    color: white;
+    align-self: center;
+}
+.tablas
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.tablaMedias
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.usuario
+{
+    color: white;
+    align-self: center;
+    font-size:2rem;
+}
+.referencias
+{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-left:10rem;
+    margin-right:10rem;
+}
+.buttonJugar {
+    margin-bottom:2rem;
+    background-color:#000000;
+    border-radius:10px;
+    border:2px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:1rem;
+    font-weight:bold;
+    padding:7px 15px;
+    text-decoration:none;
+    width:9rem;
+}
+.buttonJugar:hover {
+    background-color: white;
+    color: black;
+}
+.buttonJugar:active {
+    position:relative;
+    top:1px;
+}
+
+.buttonArray {
+    background-color:#000000;
+    border-radius:10px;
+    border:2px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:0.7rem;
+    font-weight:bold;
+    padding:7px 15px;
+    text-decoration:none;
+    width:14rem;
+}
+.buttonArray:hover {
+    background-color: white;
+    color: black;
+}
+.buttonArray:active {
+    position:relative;
+    top:1px;
+}
+.filtrado
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-left:5rem;
+    margin-right:5rem;
+}
+.bordeFiltrado
+{
+    border-radius:10px;
+    border:2px solid #ffffff;
+    margin-left:20%;
+    margin-right:20%;
+    margin-top:2rem;
+}
+.buttonCerrarAdmin {
+    background-color:#000000;
+    border-radius:10px;
+    border:2px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:1rem;
+    font-weight:bold;
+    padding:5px 20px;
+    text-decoration:none;
+}
+.buttonCerrarAdmin:hover {
+    background-color: white;
+    color: black;
+}
+.buttonCerrarAdmin:active {
+    position:relative;
+    top:1px;
+}
+.perfil
+{
+    justify-content: end;
+    direction: rtl;
+}
+.cerrarSesionAdmin
+{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    width: 11rem;
+}
+
+.adminTexto
+{
+    font-size: 1.4rem;
+    margin: 0rem;
+}
+input[type=text] {
+    border-radius: 10px;
+    border: 2px solid white;
+    background: rgba(0,0,0,0.0);
+    color: white;
+    padding-left: 0.4rem;
+    font-size: 0.95rem;
+}

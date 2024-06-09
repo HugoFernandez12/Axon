@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='axon18.css') }}">
+        <title>{% block title %}AXON{% endblock %}</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div class="general">
+            <form method="POST">
+                <div class="perfil">
+                    <div class="cerrarSesionAdmin">
+                        <p class="adminTexto">ADMIN</p>
+                        <input class="buttonCerrarAdmin" name="cerrarSesion" type="submit" value="Cerrar Sesion">
+                    </div>
+                </div>
+            </form>
+            <div class="titulo">
+                <h1 class="tituloAxon"><a class="textoTituloAxon" href="/preguntasAdmin">AXON</a></h1>
+            </div>
+            <div class="principal">
+                <form class="formulario" method="POST">
+                    {% if error!="" %}
+                        <div class="error">
+                            <p>{{error}}</p>
+                        </div>
+                    {% elif mensajeControl!="" %}
+                        <div class="error">
+                            <p>{{mensajeControl}}</p>
+                        </div>
+                    {% endif %}
+                    <div class="preguntaLarga">
+                        <p>Pregunta:</p>
+                    </div>
+                    <div class="preguntaLarga">
+                        <input class="valor" type="text" placeholder="{{preguntaWeb}}" name="pregunta" size="60">
+                    </div>
+                    <div class="preguntaLarga">
+                        <p>Tema(actualmente:{{nombreTema}}):</p>
+                    </div>   
+                    <div class="preguntaLarga">
+                        <select name="tema">
+                            {% for x in arrayTemas %}
+                                <option value="{{x[0]}}">"{{x[0]}}"</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="pregunta">
+                        <p>Respuesta1(correcta):</p>
+                        <input class="valor" type="text" placeholder="{{respuesta1}}" name="respuesta1" size="20">
+                    </div class="pregunta">
+                    
+                    <div class="pregunta">
+                        <p>Respuesta2:</p>
+                        <input class="valor" type="text" placeholder="{{respuesta2}}" name="respuesta2" size="20">
+                    </div>
+                    
+                    <div class="pregunta">
+                        <p>Respuesta3:</p>
+                        <input class="valor" type="text" placeholder="{{respuesta3}}" name="respuesta3" size="20">
+                    </div>
+                    
+                    <div class="pregunta">
+                        <p>Respuesta4:</p>
+                        <input class="valor" type="text" placeholder="{{respuesta4}}" name="respuesta4" size="20">
+                    </div>
+                    <div class="pregunta">
+                        <p>Correcta:</p>
+                        <input class="valor" type="text" placeholder="{{correcta}}" name="correcta" size="20">
+                    </div>
+                    <div class="preguntaBoton">
+                        <input class="buttonJugar" name="modificarPregunta" type="submit" value="Modificar Pregunta">
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>
+
+
+

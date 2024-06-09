@@ -1,0 +1,89 @@
+20240609 123731.760 3 ERROR: No se encontro el usuario.
+20240609 123800.582 3 ERROR: No se encontro el usuario.
+20240609 123802.366 3 ERROR: El usuario o la clave no pueden estar vacios.
+20240609 124341.984 3 ERROR: No se encontro la clave.
+20240609 124441.874 3 ERROR: No se encontro el usuario.
+20240609 124552.578 3 ERROR: El usuario ya existe.
+20240609 124654.792 6 El usuario hugo ha iniciado sesion.
+20240609 124654.793 6 El usuario hugo ha entrado al menu principal.
+20240609 161837.335 6 El usuario hugo ha iniciado sesion.
+20240609 161837.336 6 El usuario hugo ha entrado al menu principal.
+20240609 161841.420 6 El usuario hugo esta consutando su perfil.
+20240609 162829.377 6 El usuario hugo esta consutando su perfil.
+20240609 162829.393 6 El usuario hugo ha entrado al gestor de amigos.
+20240609 162834.718 3 ERROR: No se encontro a .
+20240609 163046.775 6 El usuario hugo ha iniciado sesion.
+20240609 163046.776 6 El usuario hugo ha entrado al menu principal.
+20240609 163048.407 6 El usuario hugo esta consutando su perfil.
+20240609 163049.593 6 El usuario hugo esta consutando su perfil.
+20240609 163049.610 6 El usuario hugo ha entrado al gestor de amigos.
+20240609 163050.320 3 ERROR: Nombre de amigo vacio.
+20240609 163242.857 6 El usuario hugo ha agregado un nuevo amigo.
+20240609 163307.523 3 ERROR: No se encontro a hugo.
+20240609 163315.368 3 ERROR: No se encontro a Hugo.
+20240609 163434.611 6 El usuario hugo ha iniciado sesion.
+20240609 163434.612 6 El usuario hugo ha entrado al menu principal.
+20240609 163436.381 6 El usuario hugo esta consutando su perfil.
+20240609 163437.388 6 El usuario hugo esta consutando su perfil.
+20240609 163437.405 6 El usuario hugo ha entrado al gestor de amigos.
+20240609 163443.656 3 ERROR: No se encontro a Hugo o ya esta agregado.
+20240609 163543.876 6 El usuario hugo esta consutando su perfil.
+20240609 163545.605 6 El usuario hugo esta consutando su perfil.
+20240609 163545.610 6 El usuario hugo ha entrado a la gestion de grupos.
+20240609 163826.405 6 El usuario hugo ha entrado a la creacion de grupos.
+20240609 163946.574 3 ERROR: No se han asignado usuarios al grupo.
+20240609 163955.425 3 ERROR: No se pudo crear el grupo.
+20240609 163959.189 3 ERROR: No se han asignado usuarios al grupo.
+20240609 164130.328 3 ERROR: No se pudo crear el grupo.
+20240609 164206.919 3 ERROR: El nombre del grupo no puede estar vacio.
+20240609 164607.042 6 El usuario hugo esta consutando su perfil.
+20240609 165334.794 6 El usuario hugo esta consutando su perfil.
+20240609 165334.802 6 El usuario hugo ha cerrado sesion.
+20240609 165339.056 6 El usuario admin ha iniciado sesion.
+20240609 165339.057 6 El usuario admin ha entrado al gestor de preguntas.
+20240609 165745.835 6 Se ha cambiado el nombre del grupo con exito.
+20240609 165749.181 6 Se ha cambiado el nombre del grupo con exito.
+20240609 165753.006 6 Se ha cambiado el nombre del grupo con exito.
+20240609 165918.728 6 El admin esta consutando el perfil de Hugo.
+20240609 170250.971 3 ERROR: Los campos de las preguntas estan vacios.
+20240609 170750.336 3 ERROR: Los campos de las preguntas estan vacios.
+20240609 170858.304 6 El administrador ha modificado una pregunta.
+20240609 170908.366 6 El administrador ha modificado una pregunta.
+20240609 170909.211 6 El administrador ha modificado una pregunta.
+20240609 170909.844 6 El administrador ha modificado una pregunta.
+20240609 170910.342 6 El administrador ha modificado una pregunta.
+20240609 170910.793 6 El administrador ha modificado una pregunta.
+20240609 171029.005 6 El administrador esta agregando tematicas.
+20240609 171041.182 6 El administrador esta agregando tematicas.
+20240609 171041.184 3 ERROR: La tematica no puede estar vacia.
+20240609 171341.361 6 El administrador esta agregando tematicas.
+20240609 171341.364 3 ERROR: La tematica ya existe.
+20240609 171459.277 6 El administrador esta agregando tematicas.
+20240609 171459.278 6 El administrador ha cerrado sesion.
+20240609 171545.039 6 El usuario hugo ha iniciado sesion.
+20240609 171545.039 6 El usuario hugo ha entrado al menu principal.
+20240609 171608.481 6 El usuario hugo esta jugando.
+20240609 171630.010 6 El usuario hugo esta consutando su perfil.
+20240609 171644.278 6 El usuario hugo esta consutando su perfil.
+20240609 171644.294 6 El usuario hugo ha entrado al gestor de amigos.
+20240609 171702.298 6 El usuario hugo esta consutando su perfil.
+20240609 171703.257 6 El usuario hugo esta consutando su perfil.
+20240609 171703.271 6 El usuario hugo ha entrado a la gestion de grupos.
+20240609 171732.978 6 El usuario hugo esta consutando su perfil.
+20240609 171733.917 6 El usuario hugo esta consutando su perfil.
+20240609 171733.930 6 El usuario hugo ha entrado a la gestion de grupos.
+20240609 171738.796 6 El usuario hugo esta jugando en el grupo dam2.
+20240609 171805.179 6 El usuario hugo esta consutando su perfil.
+20240609 171809.754 6 El usuario hugo esta consutando su perfil.
+20240609 171809.766 6 El usuario hugo ha entrado a la gestion de grupos.
+20240609 171810.422 6 El usuario hugo ha entrado a la creacion de grupos.
+20240609 171834.589 6 El usuario hugo esta consutando su perfil.
+20240609 171836.001 6 El usuario hugo esta consutando su perfil.
+20240609 171836.015 6 El usuario hugo ha entrado a la gestion de su clave.
+20240609 171856.255 6 El usuario hugo esta consutando su perfil.
+20240609 171858.954 6 El usuario hugo esta consutando su perfil.
+20240609 171858.965 6 El usuario hugo ha cerrado sesion.
+20240609 171904.428 6 El usuario admin ha iniciado sesion.
+20240609 171904.429 6 El usuario admin ha entrado al gestor de preguntas.
+20240609 172109.244 6 El administrador esta agregando tematicas.
+20240609 172141.514 6 El admin esta consutando el perfil de Hugo.
