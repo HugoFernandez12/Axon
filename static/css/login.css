@@ -1,0 +1,30 @@
+@import 'base.css';
+
+.field-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    width: 400px;
+}
+
+.field-group label {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.field-group input {
+    width: 250px;
+    height: 2.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.buttons button {
+    font-size: 2rem;
+    padding: 15px 30px;
+}

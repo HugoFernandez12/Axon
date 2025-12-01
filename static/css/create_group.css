@@ -1,0 +1,74 @@
+@import 'base.css';
+
+.form-section {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-bottom: 2rem;
+}
+
+.selected-friends {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 2rem 0;
+}
+
+.selected-friends h3 {
+    margin-bottom: 1rem;
+}
+
+.no-friends {
+    text-align: center;
+    opacity: 0.6;
+    margin: 1rem 0;
+}
+
+.friends-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.friend-tag {
+    background-color: rgba(34, 139, 230, 0.3);
+    border: 2px solid #228be6;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.available-friends {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.available-friends h3 {
+    margin-bottom: 1rem;
+}
+
+.friends-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.friend-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}

@@ -1,0 +1,61 @@
+@import 'base.css';
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.username {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.average {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navigation button {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.statistics {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.period-selector {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.period-selector button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+.stats-container {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    min-width: 600px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,35 @@
+@import 'base.css';
+
+.add-friend {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.add-friend-form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.add-friend-form input {
+    width: 300px;
+    height: 2.5rem;
+}
+
+.friends-list {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}

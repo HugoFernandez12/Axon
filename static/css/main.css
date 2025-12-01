@@ -1,0 +1,7 @@
+@import 'base.css';
+
+.play-button {
+    font-size: 2rem;
+    padding: 20px 40px;
+    margin-top: 3rem;
+}
