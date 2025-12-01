@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/play.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {{ nav.render_navbar(current_user, show_profile=False, show_logout=False) }}
+    
+    <div class="main">
+        <form method="POST" class="question-form">
+            <p class="theme">{{ group_name_display }}</p>
+            <p class="question">{{ question_text }}</p>
+            
+            <div class="answers">
+                {{ forms.render_button('answer1', answer1, style='answer') }}
+                {{ forms.render_button('answer2', answer2, style='answer') }}
+                {{ forms.render_button('answer3', answer3, style='answer') }}
+                {{ forms.render_button('answer4', answer4, style='answer') }}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

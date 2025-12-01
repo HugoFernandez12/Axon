@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/admin_menu.html" as admin %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+
+{% block body_class %}admin{% endblock %}
+
+{% block content %}
+<div class="container">
+    {{ nav.render_navbar('admin', show_profile=False, is_admin=True) }}
+    {{ admin.render_admin_menu('groups') }}
+    
+    <div class="main">
+        <form method="POST">
+            {{ forms.render_message(error_message, 'error') }}
+            
+            <div class="admin-list">
+                {% for i in range(groups_count) %}
+                    <div class="admin-item">
+                        <span class="item-name">{{ groups_list[i][0] }}</span>
+                        <div class="item-actions">
+                            {{ forms.render_button(i|string, 'View Group', style='small') }}
+                            {{ forms.render_button(i|string, 'Delete Group', style='small danger') }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

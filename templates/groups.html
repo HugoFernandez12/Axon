@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/groups.css') }}">
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="container">
+        {{ nav.render_navbar(current_user) }}
+        
+        <div class="main">
+            <div class="create-section">
+                {{ forms.render_button('create_group', 'Create Group', style='primary') }}
+            </div>
+            
+            <div class="groups-header">
+                <span>Group</span>
+                <span>Score</span>
+                <span>Actions</span>
+            </div>
+            
+            {% for i in range(groups_scores_count) %}
+                <div class="group-row">
+                    <span class="group-name">{{ groups_list[i] }}</span>
+                    <span class="group-score">{{ scores_list[i] }}</span>
+                    <div class="group-actions">
+                        {{ forms.render_button(i|string, 'Play', style='small') }}
+                        {{ forms.render_button(i|string, 'View Group', style='small') }}
+                        {{ forms.render_button(i|string, 'Leave Group', style='small danger') }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</form>
+{% endblock %}

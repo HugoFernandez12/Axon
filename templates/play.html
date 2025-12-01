@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/play.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {{ nav.render_navbar(current_user, show_profile=False, show_logout=False) }}
+    
+    <div class="main">
+        {% if question_count >= 5 %}
+            <p class="message">No more questions for today!</p>
+            <div class="results">
+                {% for i in range(correct_answers_count) %}
+                    <p class="result {% if user_correct_answers[i] == 1 %}correct{% else %}incorrect{% endif %}">
+                        Question {{ i+1 }}: {% if user_correct_answers[i] == 1 %}Correct{% else %}Incorrect{% endif %}
+                    </p>
+                {% endfor %}
+            </div>
+        {% else %}
+            <form method="POST" class="question-form" id="questionForm">
+                <input type="hidden" name="question_id" value="{{ question_id }}">
+                <input type="hidden" name="exit_game" value="0" id="exitGame">
+                <p class="theme">{{ theme }} - Question {{ question_count+1 }}/5</p>
+                <p class="question">{{ question_text }}</p>
+
+                <div class="answers">
+                    {{ forms.render_button('answer1', answer1, style='answer') }}
+                    {{ forms.render_button('answer2', answer2, style='answer') }}
+                    {{ forms.render_button('answer3', answer3, style='answer') }}
+                    {{ forms.render_button('answer4', answer4, style='answer') }}
+                </div>
+            </form>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var inGame = {{ 'true' if question_count < 5 else 'false' }};
+
+    if (inGame) {
+        var navbarLinks = document.querySelectorAll('.navbar a');
+        navbarLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var href = this.getAttribute('href');
+
+                if (confirm('If you leave now, your current question will be marked as incorrect. Are you sure you want to leave?')) {
+                    var form = document.getElementById('questionForm');
+                    document.getElementById('exitGame').value = '1';
+
+                    var formData = new FormData(form);
+
+                    fetch('/play', {
+                        method: 'POST',
+                        body: formData
+                    }).then(function() {
+                        window.location.href = href;
+                    });
+                }
+            });
+        });
+    }
+});
+</script>
+{% endblock %}

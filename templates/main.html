@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {{ nav.render_navbar(current_user, show_profile=True, show_logout=False) }}
+    
+    <div class="subtitle">
+        <h4>Improve yourself daily.</h4>
+    </div>
+    
+    <div class="main">
+        <form method="POST" action="/play">
+            <button type="submit" name="play" class="play-button">Play</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

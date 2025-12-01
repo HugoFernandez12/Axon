@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/admin_menu.html" as admin %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+
+{% block body_class %}admin{% endblock %}
+
+{% block content %}
+<div class="container">
+    {{ nav.render_navbar('admin', show_profile=False, is_admin=True) }}
+    {{ admin.render_admin_menu('questions') }}
+    
+    <div class="main">
+        <form method="POST" class="admin-form">
+            {{ forms.render_message(error_message, 'error') }}
+            {{ forms.render_message(control_message, 'success') }}
+            
+            <h2>Edit Question</h2>
+            
+            {{ forms.render_input('question', 'Question', value=question_text) }}
+            {{ forms.render_select('theme', 'Theme (Current: ' + theme_name + ')', themes) }}
+            {{ forms.render_input('answer1', 'Answer 1', placeholder=answer1) }}
+            {{ forms.render_input('answer2', 'Answer 2', placeholder=answer2) }}
+            {{ forms.render_input('answer3', 'Answer 3', placeholder=answer3) }}
+            {{ forms.render_input('answer4', 'Answer 4', placeholder=answer4) }}
+            {{ forms.render_input('correct', 'Correct Answer', placeholder=correct) }}
+            
+            {{ forms.render_button('modify_question', 'Modify Question', style='primary') }}
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="title">
+        <h1><a href="/">AXON</a></h1>
+    </div>
+    
+    <div class="main">
+        <form method="POST">
+            {{ forms.render_input('username', 'Username', required=True) }}
+            {{ forms.render_input('password', 'Password', type='password', required=True) }}
+            
+            <div class="buttons">
+                {{ forms.render_button('login', 'Login', style='primary') }}
+                {{ forms.render_button('register', 'Register', style='secondary') }}
+            </div>
+            
+            {{ forms.render_message(error_message, 'error') }}
+        </form>
+    </div>
+</div>
+{% endblock %}

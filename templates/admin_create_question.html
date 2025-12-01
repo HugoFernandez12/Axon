@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/admin_menu.html" as admin %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+
+{% block body_class %}admin{% endblock %}
+
+{% block content %}
+<div class="container">
+    {{ nav.render_navbar('admin', show_profile=False, is_admin=True) }}
+    {{ admin.render_admin_menu('create') }}
+    
+    <div class="main">
+        <form method="POST" class="admin-form">
+            {{ forms.render_message(error_message, 'error') }}
+            {{ forms.render_message(control_message, 'success') }}
+            
+            <h2>Create New Question</h2>
+            
+            {{ forms.render_input('question', 'Question', required=True) }}
+            {{ forms.render_select('theme', 'Theme', themes) }}
+            {{ forms.render_input('answer1', 'Answer 1 (Correct)', required=True) }}
+            {{ forms.render_input('answer2', 'Answer 2', required=True) }}
+            {{ forms.render_input('answer3', 'Answer 3', required=True) }}
+            {{ forms.render_input('answer4', 'Answer 4', required=True) }}
+            
+            {{ forms.render_button('create_question', 'Create Question', style='primary') }}
+        </form>
+    </div>
+</div>
+{% endblock %}

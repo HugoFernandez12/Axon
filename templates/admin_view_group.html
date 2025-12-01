@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/admin_menu.html" as admin %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/view_group.css') }}">
+{% endblock %}
+
+{% block body_class %}admin{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="container">
+        {{ nav.render_navbar('admin', show_profile=False, is_admin=True) }}
+        {{ admin.render_admin_menu('groups') }}
+        
+        <div class="main">
+            {{ forms.render_message(error_message, 'error') }}
+            {{ forms.render_message(control_message, 'success') }}
+            
+            <h2 class="group-title">{{ group_name_display }}</h2>
+            
+            <div class="form-section">
+                {{ forms.render_input('new_group_name', 'New Group Name', placeholder=group_name_display) }}
+                {{ forms.render_button('change_name', 'Change Name', style='primary') }}
+            </div>
+            
+            <div class="leaderboard">
+                <div class="leaderboard-header">
+                    <span>User</span>
+                    <span>Score</span>
+                </div>
+                
+                {% for i in range(users_scores_count) %}
+                    <div class="leaderboard-row">
+                        <span class="user-name">{{ users_list[i] }}</span>
+                        <span class="user-score">{{ scores_list[i] }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

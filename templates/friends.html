@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/forms.html" as forms %}
+{% import "components/tables.html" as tables %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/friends.css') }}">
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="container">
+        {{ nav.render_navbar(current_user) }}
+        
+        <div class="main">
+            <div class="section-title">
+                <h2>Add a Friend</h2>
+            </div>
+            
+            <div class="add-friend-form">
+                {{ forms.render_input('friend_name', '', placeholder='Friend username') }}
+                {{ forms.render_button('add_friend', 'Add') }}
+            </div>
+            
+            {{ forms.render_message(error_message, 'error') }}
+            
+            <div class="section-title">
+                <h2>Your Friends</h2>
+            </div>
+            
+            {{ tables.render_list(friends_list, friend_scores) }}
+        </div>
+    </div>
+</form>
+{% endblock %}

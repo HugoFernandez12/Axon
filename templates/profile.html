@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="container">
+        {{ nav.render_navbar(current_user) }}
+        
+        <div class="main">
+            <div class="user-info">
+                <p class="username">{{ current_user }}</p>
+                <p class="average">Overall Average: {{ overall_average }}</p>
+                
+                <div class="navigation">
+                    {{ forms.render_button('friends', 'Friends') }}
+                    {{ forms.render_button('groups', 'Groups') }}
+                    {{ forms.render_button('change_password', 'Change Password') }}
+                    {{ forms.render_button('logout', 'Logout', style='danger') }}
+                </div>
+            </div>
+            
+            <div class="statistics">
+                <p>Your Statistics:</p>
+            </div>
+            
+            <div class="period-selector">
+                {{ forms.render_button('period', 'Day') }}
+                {{ forms.render_button('period', 'Month') }}
+                {{ forms.render_button('period', 'Year') }}
+                {{ forms.render_button('period', 'Overall') }}
+            </div>
+            
+            <div class="stats-container">
+                {% set averages = {
+                    'Day': daily_averages,
+                    'Month': monthly_averages,
+                    'Year': yearly_averages,
+                    'Overall': overall_averages
+                } %}
+                
+                {% for i in range(themes_count) %}
+                    <div class="stat-item">
+                        <span>{{ themes[i][0] }}</span>
+                        <span>{{ averages[period][i] }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

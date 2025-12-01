@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/tables.html" as tables %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/view_group.css') }}">
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="container">
+        {{ nav.render_navbar(current_user) }}
+        
+        <div class="main">
+            <h2 class="group-title">{{ group_name_display }}</h2>
+            
+            <div class="leaderboard">
+                <div class="leaderboard-header">
+                    <span>User</span>
+                    <span>Score</span>
+                </div>
+                
+                {% for i in range(users_scores_count) %}
+                    <div class="leaderboard-row">
+                        <span class="user-name">{{ users_list[i] }}</span>
+                        <span class="user-score">{{ scores_list[i] }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

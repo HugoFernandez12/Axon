@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% import "components/navbar.html" as nav %}
+{% import "components/forms.html" as forms %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/create_group.css') }}">
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="container">
+        {{ nav.render_navbar(current_user) }}
+        
+        <div class="main">
+            <div class="form-section">
+                {{ forms.render_input('group_name', 'Group Name', value=group_name, placeholder='Enter group name') }}
+                {{ forms.render_select('theme', 'Theme', themes, selected=group_theme) }}
+                {{ forms.render_button('create_group', 'Create Group', style='primary') }}
+            </div>
+            
+            {{ forms.render_message(error_message, 'error') }}
+            {{ forms.render_message(control_message, 'success') }}
+            
+            <div class="selected-friends">
+                <h3>Selected Friends:</h3>
+                {% if group_friends_count == 0 %}
+                    <p class="no-friends">No friends added yet</p>
+                {% else %}
+                    <div class="friends-list">
+                        {% for friend in group_friends %}
+                            <span class="friend-tag">{{ friend[0] }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {{ forms.render_button('clear_friends', 'Clear All', style='danger') }}
+            </div>
+            
+            <div class="available-friends">
+                <h3>Add Friends:</h3>
+                <div class="friends-grid">
+                    {% for i in range(friends_count) %}
+                        {% if user_controls[i] == 0 %}
+                            <div class="friend-item">
+                                <span>{{ friends_list[i][0] }}</span>
+                                {{ forms.render_button(i|string, 'Add', style='small') }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
