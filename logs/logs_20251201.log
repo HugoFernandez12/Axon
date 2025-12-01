@@ -1,0 +1,161 @@
+20251201 144322.795 3 ERROR: User not found.
+20251201 144458.972 3 ERROR: User already exists.
+20251201 144507.616 6 User Hugo logged in.
+20251201 144507.618 6 User Hugo accessed main menu.
+20251201 144551.524 6 User Hugo is viewing their profile.
+20251201 144556.981 6 User Hugo is viewing their profile.
+20251201 144558.715 6 User Hugo is viewing their profile.
+20251201 144601.503 6 User Hugo is viewing their profile.
+20251201 144603.920 6 User Hugo is viewing their profile.
+20251201 144606.105 6 User Hugo is viewing their profile.
+20251201 144606.108 6 User Hugo accessed friends manager.
+20251201 144615.441 6 User Hugo is viewing their profile.
+20251201 144617.418 6 User Hugo is viewing their profile.
+20251201 144617.421 6 User Hugo accessed groups management.
+20251201 144618.836 6 User Hugo accessed group creation.
+20251201 144631.442 6 User Hugo is viewing their profile.
+20251201 144632.597 6 User Hugo is viewing their profile.
+20251201 144632.601 6 User Hugo accessed groups management.
+20251201 144635.945 6 User Hugo is viewing their profile.
+20251201 144647.629 6 User Hugo is viewing their profile.
+20251201 144654.755 6 User Hugo is playing.
+20251201 144654.768 6 User Hugo answered incorrectly
+20251201 144658.378 6 User Hugo is playing.
+20251201 144658.387 6 User Hugo answered incorrectly
+20251201 144700.728 6 User Hugo is playing.
+20251201 144700.739 6 User Hugo answered incorrectly
+20251201 144702.095 6 User Hugo is playing.
+20251201 144702.105 6 User Hugo answered incorrectly
+20251201 144703.617 6 User Hugo is playing.
+20251201 144703.626 6 User Hugo answered incorrectly
+20251201 144707.402 6 User Hugo is playing.
+20251201 144707.413 6 User Hugo answered incorrectly
+20251201 145534.878 6 User Hugo is playing.
+20251201 145534.893 6 User Hugo answered incorrectly
+20251201 145538.714 6 User Hugo is viewing their profile.
+20251201 145539.833 6 User Hugo is viewing their profile.
+20251201 145539.847 6 User Hugo logged out.
+20251201 145544.137 6 User admin logged in.
+20251201 145544.139 6 User admin accessed questions manager.
+20251201 145613.646 6 Admin is adding themes.
+20251201 145709.304 6 Admin modified a question.
+20251201 145712.212 6 Admin is adding themes.
+20251201 145720.598 6 Admin is adding themes.
+20251201 145726.325 6 Admin is viewing profile of Martin.
+20251201 145731.114 6 Admin is viewing profile of Paco.
+20251201 145733.119 6 Admin is viewing profile of Angel.
+20251201 145735.661 6 Admin is viewing profile of Luis.
+20251201 145740.523 6 Admin is viewing profile of Hugo.
+20251201 145742.872 6 Admin logged out.
+20251201 145747.762 6 User Hugo logged in.
+20251201 145747.764 6 User Hugo accessed main menu.
+20251201 145750.363 6 User Hugo is viewing their profile.
+20251201 145753.048 6 User Hugo is viewing their profile.
+20251201 145753.061 6 User Hugo accessed friends manager.
+20251201 145756.343 6 User Hugo added a new friend.
+20251201 145802.274 3 ERROR: User Teresa not found or already added.
+20251201 145808.657 6 User Hugo added a new friend.
+20251201 145810.948 6 User Hugo is viewing their profile.
+20251201 145812.550 6 User Hugo is viewing their profile.
+20251201 145812.564 6 User Hugo accessed groups management.
+20251201 145813.451 6 User Hugo accessed group creation.
+20251201 145829.775 6 User Hugo is viewing their profile.
+20251201 145830.653 6 User Hugo is viewing their profile.
+20251201 145830.666 6 User Hugo accessed groups management.
+20251201 145831.769 6 User Hugo accessed group creation.
+20251201 145849.763 6 User Hugo is viewing their profile.
+20251201 145850.792 6 User Hugo is viewing their profile.
+20251201 145850.807 6 User Hugo accessed groups management.
+20251201 145852.568 6 User Hugo is viewing their profile.
+20251201 151932.298 6 User Hugo logged in.
+20251201 151932.300 6 User Hugo accessed main menu.
+20251201 151934.433 6 User Hugo is playing.
+20251201 151934.442 6 User Hugo answered incorrectly
+20251201 151944.425 6 User Hugo is playing.
+20251201 151944.433 6 User Hugo answered incorrectly
+20251201 151949.463 6 User Hugo is playing.
+20251201 151949.472 6 User Hugo answered incorrectly
+20251201 151950.531 6 User Hugo is playing.
+20251201 151950.561 6 User Hugo answered incorrectly
+20251201 151952.250 6 User Hugo is playing.
+20251201 151952.262 6 User Hugo answered incorrectly
+20251201 151955.805 6 User Hugo is playing.
+20251201 151955.817 6 User Hugo answered incorrectly
+20251201 151959.022 6 User Hugo is viewing their profile.
+20251201 152000.292 6 User Hugo is viewing their profile.
+20251201 152000.316 6 User Hugo accessed groups management.
+20251201 152001.057 6 User Hugo accessed group creation.
+20251201 152010.021 6 User Hugo created group Test.
+20251201 152012.754 6 User Hugo is viewing their profile.
+20251201 152015.022 6 User Hugo is viewing their profile.
+20251201 152015.043 6 User Hugo accessed groups management.
+20251201 152018.826 6 User Hugo is viewing their profile.
+20251201 152019.778 6 User Hugo is viewing their profile.
+20251201 152019.800 6 User Hugo accessed groups management.
+20251201 152021.951 6 User Hugo is playing in group Test.
+20251201 152026.971 6 User Hugo is playing in group Test.
+20251201 152026.979 6 User Hugo answered correctly in group Test.
+20251201 152043.102 6 User Hugo is playing in group Test.
+20251201 152043.114 6 User Hugo answered correctly in group Test.
+20251201 152107.373 6 User Hugo is playing in group Test.
+20251201 152107.386 6 User Hugo answered correctly in group Test.
+20251201 152141.616 6 User Hugo is viewing their profile.
+20251201 152142.630 6 User Hugo is viewing their profile.
+20251201 152142.653 6 User Hugo accessed groups management.
+20251201 152145.396 6 User Hugo is viewing their profile.
+20251201 152153.403 6 User Hugo is viewing their profile.
+20251201 152153.425 6 User Hugo accessed password management.
+20251201 152156.541 6 User Hugo is viewing their profile.
+20251201 152203.441 6 User Hugo is viewing their profile.
+20251201 152713.146 6 User Hugo logged in.
+20251201 152713.147 6 User Hugo accessed main menu.
+20251201 152715.550 6 User Hugo is viewing their profile.
+20251201 152716.446 6 User Hugo is viewing their profile.
+20251201 152716.469 6 User Hugo accessed groups management.
+20251201 153145.722 6 User Hugo logged in.
+20251201 153145.722 6 User Hugo accessed main menu.
+20251201 153148.353 6 User Hugo is playing.
+20251201 153206.894 6 User Hugo answered correctly.
+20251201 153206.894 6 User Hugo is playing.
+20251201 153217.970 6 User Hugo answered correctly.
+20251201 153217.970 6 User Hugo is playing.
+20251201 153219.691 6 User Hugo answered correctly.
+20251201 153219.691 6 User Hugo is playing.
+20251201 153222.342 6 User Hugo answered correctly.
+20251201 153222.342 6 User Hugo is playing.
+20251201 153224.044 6 User Hugo answered incorrectly
+20251201 153224.044 6 User Hugo is playing.
+20251201 153403.167 6 User Hugo is viewing their profile.
+20251201 153410.320 6 User Hugo is viewing their profile.
+20251201 153412.911 6 User Hugo is playing.
+20251201 153818.766 6 User Hugo is viewing their profile.
+20251201 153821.145 6 User Hugo is viewing their profile.
+20251201 153821.182 6 User Hugo logged out.
+20251201 153826.618 6 User Angel logged in.
+20251201 153826.618 6 User Angel accessed main menu.
+20251201 153828.679 6 User Angel is playing.
+20251201 153837.804 6 User Angel is playing.
+20251201 153856.632 6 User Angel is playing.
+20251201 153900.376 6 User Angel is playing.
+20251201 153901.434 6 User Angel answered incorrectly
+20251201 153901.434 6 User Angel is playing.
+20251201 153905.079 6 User Angel is playing.
+20251201 154640.151 6 User Hugo logged in.
+20251201 154640.152 6 User Hugo accessed main menu.
+20251201 154641.918 6 User Hugo is playing.
+20251201 154647.570 6 User Hugo exited game, question marked as incorrect.
+20251201 154647.571 6 User Hugo is playing.
+20251201 154648.842 6 User Hugo is playing.
+20251201 154657.112 6 User Hugo exited game, question marked as incorrect.
+20251201 154657.113 6 User Hugo is playing.
+20251201 154657.819 6 User Hugo is playing.
+20251201 154658.557 6 User Hugo answered incorrectly
+20251201 154658.558 6 User Hugo is playing.
+20251201 154659.075 6 User Hugo answered incorrectly
+20251201 154659.077 6 User Hugo is playing.
+20251201 154659.727 6 User Hugo answered correctly.
+20251201 154659.729 6 User Hugo is playing.
+20251201 155202.265 6 User Hugo logged in.
+20251201 155202.267 6 User Hugo accessed main menu.
+20251201 155204.974 6 User Hugo is playing.
+20251201 155208.477 6 User Hugo is viewing their profile.
