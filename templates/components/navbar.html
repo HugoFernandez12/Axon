@@ -1,0 +1,28 @@
+{% macro render_navbar(current_user, show_profile=True, show_logout=True, is_admin=False) %}
+<nav class="navbar">
+    <div class="navbar-left">
+        {% if show_profile and not is_admin %}
+            <a href="/profile" class="profile-link">
+                <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile" class="profile-icon">
+            </a>
+        {% endif %}
+    </div>
+    
+    <div class="navbar-center">
+        <h1 class="logo">
+            <a href="{% if is_admin %}/admin-groups{% else %}/main{% endif %}">AXON</a>
+        </h1>
+    </div>
+    
+    <div class="navbar-right">
+        {% if is_admin %}
+            <span class="admin-badge">ADMIN</span>
+        {% endif %}
+        {% if show_logout %}
+            <form method="POST" class="logout-form">
+                <button type="submit" name="logout" value="Logout" class="btn-logout">Logout</button>
+            </form>
+        {% endif %}
+    </div>
+</nav>
+{% endmacro %}

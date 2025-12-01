@@ -1,0 +1,47 @@
+{% macro render_table(headers, rows, actions=[]) %}
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                {% for header in headers %}
+                    <th>{{ header }}</th>
+                {% endfor %}
+                {% if actions %}
+                    <th>Actions</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    {% for cell in row %}
+                        <td>{{ cell }}</td>
+                    {% endfor %}
+                    {% if actions %}
+                        <td class="actions-cell">
+                            {% for action in actions %}
+                                <button type="submit" name="{{ loop.index0 }}" value="{{ action.value }}" class="btn btn-small">
+                                    {{ action.label }}
+                                </button>
+                            {% endfor %}
+                        </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endmacro %}
+
+{% macro render_list(items, scores=None) %}
+<div class="list-container">
+    {% for item in items %}
+        <div class="list-item">
+            <span class="list-item-name">{{ item[0] }}</span>
+            {% if scores %}
+                <span class="list-item-score">{{ scores[loop.index0] }}</span>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+{% endmacro %}

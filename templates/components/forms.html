@@ -1,0 +1,40 @@
+{% macro render_input(name, label, type='text', placeholder='', value='', required=False) %}
+<div class="form-group">
+    <label for="{{ name }}">{{ label }}:</label>
+    <input 
+        type="{{ type }}" 
+        id="{{ name }}" 
+        name="{{ name }}" 
+        placeholder="{{ placeholder }}"
+        value="{{ value }}"
+        {% if required %}required{% endif %}
+    >
+</div>
+{% endmacro %}
+
+{% macro render_select(name, label, options, selected='') %}
+<div class="form-group">
+    <label for="{{ name }}">{{ label }}:</label>
+    <select id="{{ name }}" name="{{ name }}">
+        {% for option in options %}
+            <option value="{{ option[0] }}" {% if option[0] == selected %}selected{% endif %}>
+                {{ option[0] }}
+            </option>
+        {% endfor %}
+    </select>
+</div>
+{% endmacro %}
+
+{% macro render_button(name, value, type='submit', style='primary') %}
+<button type="{{ type }}" name="{{ name }}" value="{{ value }}" class="btn btn-{{ style }}">
+    {{ value }}
+</button>
+{% endmacro %}
+
+{% macro render_message(message, type='error') %}
+{% if message %}
+    <div class="message message-{{ type }}">
+        {{ message }}
+    </div>
+{% endif %}
+{% endmacro %}

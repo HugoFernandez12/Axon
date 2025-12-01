@@ -1,0 +1,13 @@
+{% macro render_admin_menu(active_page='') %}
+<nav class="admin-menu">
+    <a href="/admin-groups" class="{% if active_page == 'groups' %}active{% endif %}">Groups</a>
+    <span class="separator">|</span>
+    <a href="/admin-users" class="{% if active_page == 'users' %}active{% endif %}">Users</a>
+    <span class="separator">|</span>
+    <a href="/admin-create-question" class="{% if active_page == 'create' %}active{% endif %}">Create Questions</a>
+    <span class="separator">|</span>
+    <a href="/admin-questions" class="{% if active_page == 'questions' %}active{% endif %}">Modify Questions</a>
+    <span class="separator">|</span>
+    <a href="/admin-themes" class="{% if active_page == 'themes' %}active{% endif %}">Themes</a>
+</nav>
+{% endmacro %}
